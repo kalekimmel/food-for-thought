@@ -30,7 +30,7 @@ body {
   }
   
   .get-involved-container, .club-members-container {
-    background: linear-gradient(135deg, #f5f7fa, #c3cfe2); /* Gradient background */
+    background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
     border-radius: 15px;
     padding: 40px;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
@@ -48,8 +48,8 @@ body {
     position: relative;
     text-transform: uppercase;
     letter-spacing: 1px;
-    animation: fadeIn 1s ease-in-out; /* Fade-in animation */
-    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    animation: fadeIn 1s ease-in-out;
+    font-family: 'Montserrat', sans-serif;
   }
   
   h2::after, h3::after, .title::after {
@@ -67,19 +67,20 @@ body {
     font-size: 18px;
     line-height: 1.8;
     text-align: justify;
-    animation: fadeIn 1.5s ease-in-out; /* Fade-in animation */
-    background: rgba(72, 76, 79, 0.2); /* Lighter gray background */
+    animation: fadeIn 1.5s ease-in-out;
+    background: rgba(72, 76, 79, 0.2);
     padding: 15px 25px;
     border-radius: 10px;
     margin-bottom: 20px;
-    font-family: 'Open Sans', sans-serif; /* Stylish font */
+    font-family: 'Open Sans', sans-serif;
   }
   
   .carousel .carousel-item img, .text-center img, .member-img, .volunteer-img, .community-img, .events-img {
     border-radius: 15px;
     transition: transform 0.5s ease-in-out, box-shadow 0.5s ease-in-out;
     width: 100%;
-    height: 400px;
+    height: auto;
+    max-height: 400px;
     object-fit: cover;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
   }
@@ -123,7 +124,6 @@ body {
     color: white;
   }
   
-  /* Styles for the top image and fade-in text */
   .top-image-container {
     position: relative;
     text-align: center;
@@ -150,11 +150,11 @@ body {
     font-weight: bold;
     opacity: 0;
     animation: fadeIn 2s forwards;
-    background: rgba(255, 255, 255, 0.933); /* Lighter gray background behind text */
+    background: rgba(255, 255, 255, 0.933);
     padding: 15px 30px;
     border-radius: 10px;
-    color: #6a11cb; /* White font */
-    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    color: #6a11cb;
+    font-family: 'Montserrat', sans-serif;
   }
   
   @keyframes fadeIn {
@@ -163,7 +163,6 @@ body {
     }
   }
   
-  /* Scroll-triggered animation for images */
   .scroll-fade-in {
     opacity: 0;
     transform: translateY(20px);
@@ -175,7 +174,6 @@ body {
     transform: translateY(0);
   }
   
-  /* Flexbox alignment for images with consistent gap */
   .align-images {
     display: flex;
     align-items: center;
@@ -185,7 +183,6 @@ body {
     padding: 0;
   }
   
-  /* Hover effects on images */
   .volunteer-img, .community-img, .events-img, .member-img {
     border-radius: 15px;
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
@@ -200,13 +197,12 @@ body {
     box-shadow: 0 6px 25px rgba(0, 0, 0, 0.2);
   }
   
-  /* Button styling */
   .text-center .btn-info {
     background-color: #6a11cb;
     border-color: #6a11cb;
     transition: background-color 0.3s ease, border-color 0.3s ease;
     margin-bottom: 20px;
-    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-family: 'Montserrat', sans-serif;
   }
   
   .text-center .btn-info:hover {
@@ -214,7 +210,6 @@ body {
     border-color: #5a0db8;
   }
   
-  /* Gradient text for title */
   .title {
     font-size: 2.5em;
     font-weight: bold;
@@ -223,14 +218,14 @@ body {
     background: linear-gradient(135deg, #6a11cb, #2575fc);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    font-family: 'Montserrat', sans-serif; /* Stylish font */
+    font-family: 'Montserrat', sans-serif;
   }
   
   .subtitle {
     font-size: 1.2em;
     color: #666;
     animation: fadeIn 1.5s ease-in-out;
-    background: rgba(72, 76, 79, 0.2); /* Lighter gray background */
+    background: rgba(72, 76, 79, 0.2);
     padding: 15px 25px;
     border-radius: 10px;
     margin-bottom: 20px;
@@ -244,4 +239,65 @@ body {
     border-radius: 15px;
     padding: 20px;
     margin-bottom: 20px;
+  }
+  
+  /* Media queries for responsive design */
+  @media (max-width: 768px) {
+    .get-involved-container, .club-members-container {
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+  
+    h2, h3, .title {
+      font-size: 1.8em;
+      margin-top: 20px;
+    }
+  
+    p, .subtitle {
+      font-size: 16px;
+      padding: 10px 15px;
+    }
+  
+    .text-center {
+      padding: 20px;
+    }
+  
+    .fade-in-text {
+      font-size: 2.5em;
+      padding: 10px 20px;
+    }
+  
+    .top-image {
+      max-height: 200px;
+    }
+  
+    .carousel .carousel-item img, .text-center img, .member-img, .volunteer-img, .community-img, .events-img {
+      height: auto;
+      max-height: 300px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    h2, h3, .title {
+      font-size: 1.5em;
+      margin-top: 15px;
+    }
+  
+    p, .subtitle {
+      font-size: 14px;
+      padding: 8px 12px;
+    }
+  
+    .text-center {
+      padding: 15px;
+    }
+  
+    .fade-in-text {
+      font-size: 2em;
+      padding: 8px 15px;
+    }
+  
+    .carousel .carousel-item img, .text-center img, .member-img, .volunteer-img, .community-img, .events-img {
+      max-height: 250px;
+    }
   }
