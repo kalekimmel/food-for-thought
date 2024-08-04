@@ -1,10 +1,37 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Carousel, Container, Row, Col } from 'react-bootstrap';
 import './HomePage.css';
 
 const HomePage = () => {
+  useEffect(() => {
+    const handleScroll = () => {
+      const elements = document.querySelectorAll('.scroll-fade-in');
+      elements.forEach(element => {
+        const rect = element.getBoundingClientRect();
+        if (rect.top <= window.innerHeight && rect.bottom >= 0) {
+          element.classList.add('visible');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+
   return (
     <>
+      <div className="top-image-container">
+        <img
+          src="../../../Images/Picture.jpg"
+          alt="Top Banner"
+          className="top-image"
+        />
+        <div className="fade-in-text">Food for Thought</div>
+      </div>
+
       <Container className="container my-4">
         <h2 className="text-center">Mission Statement</h2>
         <p>
@@ -25,27 +52,26 @@ const HomePage = () => {
       </Container>
 
       <Container className="my-4">
-        <Row className="my-4">
-          <Col md={6} className="text-center">
+        <Row className="my-4 align-images">
+          <Col md={6} className="text-center scroll-fade-in">
             <img
               src="../../../Images/Madison.jpg"
               alt="Food for Thought"
               className="img-fluid"
-              style={{ maxHeight: '400px', objectFit: 'cover' }}
+              style={{ height: '400px', objectFit: 'cover' }}
             />
           </Col>
-          <Col md={6}>
+          <Col md={6} className="scroll-fade-in">
             <Carousel>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
                   src="../../../Images/IMG_0309.jpg"
                   alt="Member 1"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                  style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <h3>Member 1</h3>
-                  <p>Role: President</p>
+                  <p>Preparation in Progress</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -53,11 +79,10 @@ const HomePage = () => {
                   className="d-block w-100"
                   src="../../../Images/IMG_0283.jpg"
                   alt="Member 2"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                  style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <h3>Member 2</h3>
-                  <p>Role: Vice President</p>
+                  <p>More Members</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -65,11 +90,10 @@ const HomePage = () => {
                   className="d-block w-100"
                   src="../../../Images/IMG_0301.jpg"
                   alt="Member 3"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                  style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <h3>Member 3</h3>
-                  <p>Role: Treasurer</p>
+                  <p>Purchasing supplies, largely self-funded</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -77,23 +101,21 @@ const HomePage = () => {
                   className="d-block w-100"
                   src="../../../Images/IMG_0311.jpg"
                   alt="Member 4"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                  style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <h3>Member 4</h3>
-                  <p>Role: Secretary</p>
+                  <p>Assembly Line</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
                 <img
                   className="d-block w-100"
-                  src="../../../Images/IMG_0329.jpg"
+                  src="../../../Images/IMG_0280.jpg"
                   alt="Member 5"
-                  style={{ maxHeight: '400px', objectFit: 'cover' }}
+                  style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <h3>Member 5</h3>
-                  <p>Role: Member</p>
+                  <p>Pranav hard at work</p>
                 </div>
               </Carousel.Item>
             </Carousel>
@@ -103,5 +125,6 @@ const HomePage = () => {
     </>
   );
 };
+
 
 export default HomePage;
