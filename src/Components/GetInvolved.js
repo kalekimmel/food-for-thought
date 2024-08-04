@@ -1,40 +1,106 @@
-import React from 'react';
-import { Container, Button, Row, Col } from 'react-bootstrap';
-import './HomePage.css';
+import React, { useState } from 'react';
+import { Container, Row, Col, Button, Form } from 'react-bootstrap';
+import './GetInvolved.css';
+import axios from 'axios';
 
 const GetInvolved = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const [responseMessage, setResponseMessage] = useState('');
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({ ...formData, [name]: value });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+
+    axios.post('http://localhost:5000/submit-form', formData)
+      .then(response => {
+        setResponseMessage(response.data.message);
+        setFormData({
+          name: '',
+          email: '',
+          message: ''
+        });
+      })
+      .catch(error => {
+        setResponseMessage('Error submitting form.');
+      });
+  };
+
   return (
-    <Container className="container my-4">
+    <Container className="get-involved-container">
       <h2 className="text-center">Get Involved</h2>
-      <p>
-        We welcome all students who are passionate about making a difference in our community. Here are some ways you can get involved with Food for Thought:
+      <p className="text-center">
+        Join us in making a difference in our community. Whether you want to volunteer, donate, or just learn more, we have a place for you.
       </p>
-      <ul>
-        <li>Join our cooking sessions and help prepare meals.</li>
-        <li>Participate in food delivery to homeless individuals in Madison.</li>
-        <li>Engage in conversations and build connections with those we serve.</li>
-        <li>Contribute to fundraising and awareness campaigns.</li>
-        <li>Volunteer for organizing events and managing club activities.</li>
-      </ul>
-      <p>
-        If you're interested in joining us, please contact us at <a href="mailto:info@foodforthought.com">info@foodforthought.com</a>. Together, we can make a positive impact on our community.
-      </p>
+      <Row className="my-4 align-items-center">
+        <Col md={6} className="text-center">
+          <img
+            src="../../../Images/volunteer.jpg"
+            alt="Volunteer"
+            className="img-fluid"
+          />
+        </Col>
+        <Col md={6}>
+          <h3 className="text-center">Volunteer with Us</h3>
+          <p>
+            Volunteering with Food for Thought is a rewarding experience. You'll be part of a team that makes a real impact in the lives of those who need it most.
+          </p>
+          <Form onSubmit={handleSubmit}>
+            <Form.Group controlId="formName">
+              <Form.Label>Your Name</Form.Label>
+              <Form.Control
+                type="text"
+                placeholder="Enter your name"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formEmail">
+              <Form.Label>Email Address</Form.Label>
+              <Form.Control
+                type="email"
+                placeholder="Enter your email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Form.Group controlId="formMessage">
+              <Form.Label>Message</Form.Label>
+              <Form.Control
+                as="textarea"
+                rows={3}
+                placeholder="How would you like to help?"
+                name="message"
+                value={formData.message}
+                onChange={handleChange}
+              />
+            </Form.Group>
+            <Button variant="primary" type="submit" className="mt-2">
+              Submit
+            </Button>
+          </Form>
+          {responseMessage && <p className="mt-3">{responseMessage}</p>}
+        </Col>
+      </Row>
       <Row className="text-center my-4">
-        <Col>
-          <Button
-            variant="primary"
-            href="mailto:info@foodforthought.com"
-            className="mx-2"
-          >
+        <Col md={6}>
+          <Button variant="info" className="mb-3" href="mailto:info@foodforthought.com">
             Email Us
           </Button>
-          <Button
-            variant="success"
-            href="https://venmo.com/"
-            target="_blank"
-            className="mx-2"
-          >
-            Venmo Us
+        </Col>
+        <Col md={6}>
+          <Button variant="info" className="mb-3" href="https://venmo.com/foodforthought">
+            Donate via Venmo
           </Button>
         </Col>
       </Row>
