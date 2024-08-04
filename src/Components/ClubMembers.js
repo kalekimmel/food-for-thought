@@ -4,10 +4,10 @@ import './ClubMembers.css';
 
 const ClubMembers = () => {
   const members = [
-    { name: 'Member 1', role: 'President', image: "../../../Images/IMG_0098.PNG" },
-    { name: 'Member 2', role: 'Vice President', image: '../../../Images/IMG_0630.PNG' },
-    { name: 'Member 3', role: 'Treasurer', image:  "../../../Images/IMG_0631.PNG" },
-    { name: 'Member 4', role: 'Secretary', image: "../../../Images/IMG_0633.PNG"  },
+    { name: 'Kale Kimmel', role: 'Vice President/Website Designer', image: "../../../Images/IMG_0098.PNG" },
+    { name: 'Rudy Wicker', role: 'Vice President', image: '../../../Images/IMG_0630.PNG' },
+    { name: 'Pranav Dronavalli', role: 'Treasurer', image:  "../../../Images/IMG_0631.PNG" },
+    { name: 'Michael Crivello', role: 'Secretary', image: "../../../Images/IMG_0633.PNG"  },
     // Add more members as needed
   ];
 

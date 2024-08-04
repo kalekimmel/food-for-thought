@@ -71,7 +71,6 @@ const HomePage = () => {
                   style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <p>Preparation in Progress</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -82,7 +81,6 @@ const HomePage = () => {
                   style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <p>More Members</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -93,7 +91,6 @@ const HomePage = () => {
                   style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <p>Purchasing supplies, largely self-funded</p>
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -104,7 +101,7 @@ const HomePage = () => {
                   style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <p>Assembly Line</p>
+                  
                 </div>
               </Carousel.Item>
               <Carousel.Item>
@@ -115,7 +112,6 @@ const HomePage = () => {
                   style={{ height: '400px', objectFit: 'cover' }}
                 />
                 <div className="carousel-caption-hover">
-                  <p>Pranav hard at work</p>
                 </div>
               </Carousel.Item>
             </Carousel>
