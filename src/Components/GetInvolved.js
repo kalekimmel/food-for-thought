@@ -13,6 +13,7 @@ import {
 import './GetInvolved.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faEnvelope, faDonate } from '@fortawesome/free-solid-svg-icons';
+import EventCalendar from './EventCalendar';
 
 ChartJS.register(
   CategoryScale,
@@ -120,13 +121,19 @@ const GetInvolved = () => {
             className="img-fluid events-img"
           />
           <h4 className="mt-3">Events</h4>
-          <p>Join us at our upcoming events to learn more about our mission and how you can contribute. From fundraisers to community dinners, there's always a way to get involved.</p>
+          <p>Join us at our upcoming events to learn more about our mission and how you can contribute. From fundraisers to community events, there's always a way to get involved.</p>
         </Col>
       </Row>
       <Row className="my-4 fade-in">
         <Col>
           <h3 className="text-center">Our Progress</h3>
           <Bar data={data} options={options} />
+        </Col>
+      </Row>
+      <Row className="my-4 fade-in">
+        <Col>
+          <h3 className="text-center">Upcoming Events</h3>
+          <EventCalendar />
         </Col>
       </Row>
     </Container>
