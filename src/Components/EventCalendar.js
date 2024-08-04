@@ -6,7 +6,7 @@ import 'react-big-calendar/lib/css/react-big-calendar.css';
 const localizer = momentLocalizer(moment);
 
 const EventCalendar = () => {
-  const [events, setEvents] = useState([
+  const [events] = useState([
     {
       title: 'Back to School Meeting',
       start: new Date(2024, 7, 26, 10, 0), // Date is in format: year, month (0-indexed), day, hour, minute
