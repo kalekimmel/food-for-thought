@@ -5,6 +5,7 @@ import HomePage from './Components/HomePage';
 import GetInvolved from './Components/GetInvolved';
 import ClubMembers from './Components/ClubMembers';
 import './Components/HomePage.css';
+import Merchandise from './Components/Merchandise';
 
 const App = () => {
   return (
@@ -18,6 +19,8 @@ const App = () => {
               <Nav.Link as={Link} to="/">Home</Nav.Link>
               <Nav.Link as={Link} to="/get-involved">Get Involved</Nav.Link>
               <Nav.Link as={Link} to="/club-members">Club Leaders</Nav.Link>
+              <Nav.Link as={Link} to="/merchandise">Merchandise</Nav.Link>
+
             </Nav>
           </Navbar.Collapse>
         </Container>
@@ -27,6 +30,7 @@ const App = () => {
         <Route exact path="/" element={<HomePage />} />
         <Route path="/get-involved" element={<GetInvolved />} />
         <Route path="/club-members" element={<ClubMembers />} />
+        <Route path="/merchandise" element={<Merchandise />} />
       </Routes>
     </Router>
   );

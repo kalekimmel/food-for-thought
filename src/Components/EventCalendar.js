@@ -9,12 +9,12 @@ const EventCalendar = () => {
   const [events] = useState([
     {
       title: 'Back to School Meeting',
-      start: new Date(2024, 7, 26, 10, 0), // Date is in format: year, month (0-indexed), day, hour, minute
+      start: new Date(2024, 7, 26, 10, 0), 
       end: new Date(2024, 7, 26, 11, 0),
     },
     {
         title: 'Food Giveaway',
-        start: new Date(2024, 7, 31, 10, 0), // Date is in format: year, month (0-indexed), day, hour, minute
+        start: new Date(2024, 7, 31, 10, 0), 
         end: new Date(2024, 7, 31, 11, 0),
       },
   ]);
