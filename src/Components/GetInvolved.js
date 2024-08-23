@@ -70,7 +70,7 @@ const GetInvolved = () => {
       <div className="header-section text-center fade-in">
         <h2 className="title">Get Involved</h2>
         <p className="subtitle">
-          Join us in making a difference in our community. Whether you want to volunteer, donate, or just learn more, we have a place for you.
+        Interested in volunteering? We are always looking for new members to support and grow our community. Whether you would like to cook, share meals, donate, or learn more, we have a place for you.
         </p>
       </div>
       <Row className="my-4 align-items-center fade-in">
@@ -84,12 +84,11 @@ const GetInvolved = () => {
         <Col md={6}>
           <h3 className="text-center">Volunteer with Us</h3>
           <p>
-            Volunteering with Food for Thought is a rewarding experience. You'll be part of a team that makes a real impact in the lives of those who need it most. Our volunteers help with preparing and distributing meals, organizing events, and raising awareness about food insecurity. If you are interested in joining our volunteer team, please reach out to us via the contact options below.
+          Volunteering with Food for Thought is a rewarding experience. You’ll be part of a team that makes a real impact in the lives of those who need it most. Our organization is run entirely by volunteers who prepare and distribute meals, organize events, fundraise, and more. If you are interested in volunteering, contact Paul Selberg, and he will help you find the best way to contribute to our team.
           </p>
           <h3 className="text-center">Our Next Steps</h3>
           <p>
-            While we have successfully reached many of our goals through the dedicated self-funding of our members, we are eager to expand our club's impact even further. We are actively seeking grants and forming partnerships with local businesses to repurpose their surplus food and support our mission.
-          </p>
+          While we have successfully reached many of our goals through our dedicated self-funding members, we are eager to expand our club's impact. We are actively seeking partnerships with local businesses to repurpose their surplus food to decrease food waste and support our mission. Additionally, we are seeking opportunities to eventually obtain clothes, blankets, and basic toiletries to support those without shelter, especially in the winter.          </p>
         </Col>
       </Row>
       <Row className="text-center my-4 fade-in">

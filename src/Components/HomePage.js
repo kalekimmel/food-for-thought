@@ -35,16 +35,14 @@ const HomePage = () => {
       <Container className="container my-4">
         <h2 className="text-center">Mission Statement</h2>
         <p>
-          We are a dedicated group of students from the University of Wisconsin-Madison who are passionate about our school and community. Recognizing the beauty of Madison and the challenges it faces, particularly the prevalence of homelessness, we strive to make a positive impact.
+        As a society, we often dehumanize those without housing, creating the greatest poverty: loneliness and a lack of dignity. We are dedicated to restoring the inherent dignity of individuals experiencing homelessness by sharing meals and, most importantly, conversation. Through compassion, empathy, and genuine human interactions, we strive to build a community regardless of one's housing situation.
         </p>
         <h3 className="text-center">Our Origin</h3>
         <p>
-          Our founder, Paul Selborg, envisioned a club that would address these issues directly. Thus, "Food for Thought" was born as a self-funded initiative with a simple yet profound mission: to cook and deliver nutritious meals to homeless individuals in Madison.
-        </p>
+        A group of UW-Madison students came together after spending time sharing food with people experiencing homelessness. Seeing the profound impact on both the individuals they served and on themselves, they wanted to share this opportunity with other students. The name 'Food for Thought' originated from the idea that by sharing food, we also share thoughts—truly embodying the concept. This self-funded initiative was ignited by a passion to cook, share food, and spread love to those without shelter.        </p>
         <h3 className="text-center">Our Mission</h3>
         <p>
-          The name "Food for Thought" embodies our dual mission. We not only provide food to those in need but also offer companionship. Our members engage in meaningful conversations with the individuals we serve, sharing a meal and fostering a sense of community and connection. Through these interactions, we aim to brighten their day and offer support and understanding.
-        </p>
+        The name 'Food for Thought' embodies our dual mission of not only providing food but also companionship to those without shelter. The organization operates by having a group of members bond together while cooking a large meal served on paper plates. In groups of 2-3, members then head to the streets and enjoy their meal with those without shelter, seeking to deepen bonds and share compassion with everyone in Madison, Wisconsin. Additionally, all members are invited to monthly meetings, which aim to foster community, showcase club advancements, discuss fundraising opportunities, and more.        </p>
         <h3 className="text-center">Our Impact</h3>
         <p>
           By combining nourishment with thoughtful dialogue, we hope to make a tangible difference in the lives of the homeless in Madison. Our goal is to create lasting positive change in our community, one meal and one conversation at a time.
