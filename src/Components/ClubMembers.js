@@ -5,8 +5,8 @@ import './ClubMembers.css';
 const ClubMembers = () => {
   const members = [
     { name: 'Paul Selborg', role: 'President', image: "../../../Images/paul.png" },
-    { name: 'Kale Kimmel', role: 'Vice President/Lead Web Designer', image: "../../../Images/IMG_0098 (2).PNG" },
-    { name: 'Rudy Wicker', role: 'Philanthropy Manager/Head Chef', image: '../../../Images/IMG_0630.PNG' },
+    { name: 'Kale Kimmel', role: 'VP/Lead Web Designer', image: "../../../Images/IMG_0098 (2).PNG" },
+    { name: 'Rudy Wicker', role: 'Philanthropy Manager', image: '../../../Images/IMG_0630.PNG' },
     { name: 'Pranav Dronavalli', role: 'Sous Chef', image:  "../../../Images/IMG_0631.PNG" },
     
   ];
